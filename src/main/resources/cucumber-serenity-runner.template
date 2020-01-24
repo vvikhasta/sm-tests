@@ -1,0 +1,15 @@
+package cucumber;
+
+import org.junit.runner.RunWith;
+import net.serenitybdd.cucumber.CucumberWithSerenity;
+import cucumber.api.CucumberOptions;
+import cucumber.api.junit.Cucumber;
+
+
+@RunWith(CucumberWithSerenity.class)
+@CucumberOptions(
+strict = true,
+features = {"target/cucumber-parallel/[CUCABLE:FEATURE].feature"},
+//plugin = {"json:/home/odemkovych/Projects/tb/tbqa/selenium-tests/target/cucumber-parallel/json/1.json", "html:/home/odemkovych/Projects/tb/tbqa/selenium-tests/target/cucumber-parallel/html/1.html"},
+monochrome = true,
+glue = {"com.savvymoney.smtests.cucumber.stepDefinitions"})

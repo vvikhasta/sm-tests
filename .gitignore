@@ -1,0 +1,7 @@
+.settings/
+/target/
+*.iml
+.classpath
+.project
+/sm-tests.ipr
+/sm-tests.iws
