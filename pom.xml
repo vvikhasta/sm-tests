@@ -17,12 +17,19 @@
         <run.feature.tag>@main</run.feature.tag>
     </properties>
 
+
     <dependencies>
 
         <dependency>
             <groupId>net.serenity-bdd</groupId>
             <artifactId>serenity-core</artifactId>
             <version>2.0.91</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>1.7.21</version>
         </dependency>
 
         <dependency>
@@ -152,7 +159,7 @@
                 <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
-                <app.server.url>https://www.savvymoney.com</app.server.url>
+                <app.server.url>https://beta.savvymoney.com/ui</app.server.url>
                 <additional.serenity.properties>
                     webdriver.remote.driver=
                     webdriver.remote.url=

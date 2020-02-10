@@ -6,8 +6,11 @@ import org.fluentlenium.core.annotation.Page;
 
 public class SMLoginPageSteps {
 
+
     @Page
     SMLoginPage smLoginPage;
+
+    public String buttonSignIn;
 
     @Step
     public void openLoginPage() {
@@ -15,13 +18,18 @@ public class SMLoginPageSteps {
     }
 
     @Step
-    public void login(String userName, String password) {
-        smLoginPage.login(userName, password);
+    public void userEnterCredentials (String userame, String password) {
+
+        smLoginPage.userEnterCredentials(userame, password);
+    }
+    @Step
+    public void userSubmitedData(){
+        smLoginPage.clickOn(buttonSignIn);
     }
 
     @Step
-    public String getErrorMessage() {
-       return smLoginPage.getErrorMessage();
+    public String UserSeesAutorizePage() {
+       return smLoginPage.getAutorizeText();
     }
 
 }

@@ -117,7 +117,7 @@ public abstract class AbstractPage extends PageObject {
 
         long start = System.currentTimeMillis();
         long delta = 0;
-        long timeOut = 8000;
+        long timeOut = 2000;
 
 
         do {

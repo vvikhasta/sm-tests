@@ -2,14 +2,13 @@ package com.savvymoney.smtests.cucumber.pages.savvymoney;
 
 import com.savvymoney.smtests.cucumber.utils.AbstractPage;
 import net.thucydides.core.annotations.DefaultUrl;
-import net.thucydides.core.pages.PageObject;
 
-@DefaultUrl("/login")
+
+@DefaultUrl("/partner-login")
 public class SMLoginPage extends AbstractPage {
 
-    private String inputLogin = "//*[@id='email-sign-in']";
-    private String inputPassword = "//*[@id='password-sign-in']";
-    private String buttonSignIn = "//*[@id='login-btn']";
+    private String inputLogin = "//*[@id='email']";
+    private String inputPassword = "//*[@id='password']";
 
     @Override
     protected String pageIdentifierXpath() {
@@ -17,15 +16,15 @@ public class SMLoginPage extends AbstractPage {
     }
 
 
-    public void login(String userName, String password) {
-        typeInto(getWebElement(inputLogin), userName);
-        typeInto(getWebElement(inputPassword), password);
-        clickOn(buttonSignIn);
-    }
 
-    public String getErrorMessage() {
-        waitFor("//*[@id='errorTitle-sign-in']");
-        return getTextFrom("//*[@id='errorTitle-sign-in']");
+    public void userEnterCredentials(String username, String Password) {
+        typeInto(getWebElement(inputLogin), username);
+        typeInto(getWebElement(inputPassword), Password);
+          }
+
+    public String getAutorizeText() {
+        waitFor("//*[@class='vv-blue-title']");
+        return getTextFrom("//*[@class='vv-blue-title']");
     }
 
 }
